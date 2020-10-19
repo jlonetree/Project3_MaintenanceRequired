@@ -1,0 +1,17 @@
+<%= form_with(model: main_screen, local: true) do |form| %>
+  <% if main_screen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(main_screen.errors.count, "error") %> prohibited this main_screen from being saved:</h2>
+
+      <ul>
+        <% main_screen.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

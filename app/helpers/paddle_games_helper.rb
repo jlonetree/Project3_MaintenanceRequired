@@ -1,0 +1,2 @@
+module PaddleGamesHelper
+end
