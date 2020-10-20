@@ -1,0 +1,22 @@
+
+html {
+    color: red;
+    padding: 0;
+    margin: 0;
+    background-color: honeydew;
+  }
+  canvas {
+    background: #00ff00;
+    background: -webkit-linear-gradient(white, cyan);
+    background-color: lightgreen;
+    display: block;
+    margin: 0 auto;
+  }
+  h1 {
+    color: darkslateblue;
+    margin: auto;
+    font-family: monospace;
+  }
+  h4 {
+    color: darkseagreen;
+  }
