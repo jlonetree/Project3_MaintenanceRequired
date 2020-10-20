@@ -1,2 +1,0 @@
-class MessageBoard < ApplicationRecord
-end
