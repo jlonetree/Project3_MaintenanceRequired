@@ -1,22 +1,86 @@
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
 html {
-    color: red;
-    padding: 0;
-    margin: 0;
-    background-color: honeydew;
+  color: red;
+  padding: 0;
+  margin: 0;
+  background-color: honeydew;
+}
+canvas {
+  background: #00ff00;
+  background: -webkit-linear-gradient(white, cyan);
+  background-color: lightgreen;
+  display: block;
+  margin: 0 auto;
+}
+h1 {
+  color: darkslateblue;
+  margin: auto;
+  font-size: 52px;
+  font-family: 'Fira Mono';
+  letter-spacing: -4px;
+}
+div{
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
   }
-  canvas {
-    background: #00ff00;
-    background: -webkit-linear-gradient(white, cyan);
-    background-color: lightgreen;
-    display: block;
-    margin: 0 auto;
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
   }
-  h1 {
-    color: darkslateblue;
-    margin: auto;
-    font-family: monospace;
+  62%{
+    transform: translate(0,0) skew(5deg); 
   }
-  h4 {
-    color: darkseagreen;
+}
+
+div:before,
+div:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+div:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
   }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+div:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+h4 {
+  font: 'Fira Mono';
+  font-size: 14px;
+  color: darkseagreen;
+}
