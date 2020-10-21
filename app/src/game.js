@@ -1,4 +1,4 @@
-let canvas = document.getElementById("myCanvas");
+let canvas = document.getElementById("canvas4");
 let ctx = canvas.getContext("2d");
 let ballRadius = 6;
 let x = canvas.width / 2;
@@ -64,7 +64,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("...wow, I'm honestly shocked");
+            alert("YOU WIN, CONGRATS!");
             document.location.reload();
           }
         }
@@ -132,7 +132,7 @@ function draw() {
     } else {
       lives--;
       if (!lives) {
-        alert("I guess you can keep trying, if you must");
+        alert("GAME OVER");
         document.location.reload();
       } else {
         x = canvas.width / 2;
