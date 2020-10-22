@@ -7,7 +7,8 @@ html {
   margin: 0;
   background-color: honeydew;
 }
-#myCanvas {
+
+#canvas4 {
   background: -webkit-linear-gradient(white, cyan);
   background-color: lightgreen;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -24,11 +25,14 @@ h1 {
   font-family: 'Fira Mono';
   letter-spacing: -4px;
 }
+
 #Brick-breaker {
   animation: glitch 1s linear infinite;
   text-shadow: 2px 2px 5px darkseagreen;
-
 }
+
+/* div{
+} */
 
 @keyframes glitch{
   2%,64%{
@@ -84,6 +88,7 @@ div:after{
     transform: translate(-25px,6px) skew(21deg); 
   }
 }
+
 h4 {
   font: 'Fira Mono';
   font-size: 14px;
@@ -136,7 +141,7 @@ h4 {
     cursor: pointer; /* Mouse pointer on hover */
   }
   
-  /* Darker background on mouse-over */
+/*changes button color on hover*/
   .btn:hover {
     background-color: coral;
   }
