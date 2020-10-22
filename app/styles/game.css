@@ -7,13 +7,16 @@ html {
   margin: 0;
   background-color: honeydew;
 }
-canvas {
-  background: #00ff00;
+#myCanvas {
   background: -webkit-linear-gradient(white, cyan);
   background-color: lightgreen;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
   margin: 0 auto;
+  grid-column-start: 2;
+  grid-column-end: 5;
 }
+
 h1 {
   color: darkslateblue;
   margin: auto;
@@ -21,8 +24,10 @@ h1 {
   font-family: 'Fira Mono';
   letter-spacing: -4px;
 }
-div{
+#Brick-breaker {
   animation: glitch 1s linear infinite;
+  text-shadow: 2px 2px 5px darkseagreen;
+
 }
 
 @keyframes glitch{
@@ -83,4 +88,47 @@ h4 {
   font: 'Fira Mono';
   font-size: 14px;
   color: darkseagreen;
+  border-right: solid 3px darkslateblue;
+  white-space: nowrap;
+  overflow: hidden;  
+  font-size: 17px;
+  color: seafoamgreen;
 }
+h4 {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+    animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: darkslateblue;}
+    to{border-right-color: transparent;}
+  }
+  #wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:  80% 20%;
+    grid-gap: 20px;
+    z-index: 1;
+}
+
+.score-item {
+    background-color: yellowgreen;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px;
+}
+
+/* .game-item { */
+    /* grid-column-start: 2;
+        grid-column-end: 5;
+    } */
+    

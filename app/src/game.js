@@ -1,3 +1,28 @@
+const userUrl = 'http://localhost:3000/scores/'
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("loaded")
+    fetch(userUrl)
+    .then(res => res.json())
+    .then(scores => scores.forEach(score => { renderScores(score)}))
+})
+
+function renderScores(score) {
+    console.log(score)
+    const card = document.querySelector('#score-item')
+    const info = document.createElement('h3')
+    const icon = document.createElement('i')
+    const btn = document.createElement('button')
+
+    info.innerText = score.username.name + '       ' + score.score
+    icon.className = 'fa fa-frown-o'
+    
+    btn.append(icon)
+    info.append(btn)
+    card.append(info)
+
+}
+
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 let ballRadius = 6;
@@ -64,7 +89,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("...wow, I'm honestly shocked");
+            alert("... how many tries did that take you?");
             document.location.reload();
           }
         }
@@ -132,7 +157,7 @@ function draw() {
     } else {
       lives--;
       if (!lives) {
-        alert("I guess you can keep trying, if you must");
+        alert("Why are you still trying?");
         document.location.reload();
       } else {
         x = canvas.width / 2;
