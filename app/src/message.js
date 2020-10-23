@@ -15,7 +15,6 @@ function createMessage() {
     
     const username = document.createElement("li")
     username.innerText = "TrashyChan: "
-    // username.className = 'usr-name'
 
     const message = document.createElement("li")
     message.innerText = "Welcome to the ThunderDome"
