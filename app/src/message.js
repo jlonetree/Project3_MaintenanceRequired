@@ -11,14 +11,14 @@ function createMessage() {
     const messageDisplay = document.createElement("div")
     messageDisplay.setAttribute("id", "message-display")
     
-    const ul = document.createElement("ul")
+    const info = document.createElement("div")
     
-    const username = document.createElement("li")
+    const username = document.createElement("p")
     username.innerText = "TrashyChan: "
-    // username.className = 'usr-name'
 
-    const message = document.createElement("li")
+    const message = document.createElement("p")
     message.innerText = "Welcome to the ThunderDome"
+    message.className = ''
 
     const inputArea = document.createElement("div")
     inputArea.setAttribute("class", "message-input")
@@ -32,13 +32,22 @@ function createMessage() {
     const postBtn = document.createElement("button")
     postBtn.innerText = "Send"
     postBtn.className = 'bttn'
-    postBtn.addEventListener("click", event => {
-        event.preventDefault()
-    })
+    postBtn.addEventListener('click', () => {
 
+        let message = document.createElement('p')
+        let icon = document.querySelector('i')
+
+        icon.className = 'fa fa-user-circle-o'
+        message.innerText = messageInput.value
+
+        info.append(message, icon)
+
+    })
+    
     messageBoard.append(messageDisplay, inputArea)
-    messageDisplay.append(ul)
-    ul.append(username, message)
+    messageDisplay.append(info)
+    info.append(username, message)
     inputArea.append(messageInput, postBtn)
+
 
 }
