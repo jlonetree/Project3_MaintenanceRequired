@@ -1,0 +1,26 @@
+
+
+
+
+
+.bttn {
+    border: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    margin: 15px;
+    color: grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.bttn:hover {
+    background-color: gainsboro;
+    color: grey;
+}
+
+.input-box {
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    color: darkseagreen;
+}

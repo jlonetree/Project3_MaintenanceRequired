@@ -15,6 +15,7 @@ function createMessage() {
     
     const username = document.createElement("li")
     username.innerText = "TrashyChan: "
+    // username.className = 'usr-name'
 
     const message = document.createElement("li")
     message.innerText = "Welcome to the ThunderDome"
@@ -23,12 +24,14 @@ function createMessage() {
     inputArea.setAttribute("class", "message-input")
 
     let messageInput = document.createElement("input")
+    messageInput.className = 'input-box'
     messageInput.setAttribute("type", "text")
     messageInput.setAttribute("message", "message")
     messageInput.setAttribute("placeholder", "Enter message here")
 
     const postBtn = document.createElement("button")
     postBtn.innerText = "Send"
+    postBtn.className = 'bttn'
     postBtn.addEventListener("click", event => {
         event.preventDefault()
     })
