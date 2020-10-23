@@ -1,5 +1,5 @@
 
-const userUrl = 'http://localhost:3000/scores/'
+const scoreUrl = 'http://localhost:3000/scores/'
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("loaded")
@@ -21,6 +21,15 @@ function renderScores(score) {
     btn.append(icon)
     info.append(btn)
     card.append(info)
+
+    btn.addEventListener('click', () => {
+
+        info.remove()
+        btn.remove()
+        icon.remove()
+    
+    })
+
 
 }
 
