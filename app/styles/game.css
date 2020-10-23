@@ -90,7 +90,7 @@ div:after{
 }
 
 h4 {
-  font: 'Fira Mono';
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
   font-size: 14px;
   color: darkseagreen;
   border-right: solid 3px darkslateblue;
