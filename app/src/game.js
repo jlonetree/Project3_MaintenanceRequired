@@ -3,7 +3,7 @@ const scoreUrl = 'http://localhost:3000/scores/'
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("loaded")
-    fetch(userUrl)
+    fetch(scoreUrl)
     .then(res => res.json())
     .then(scores => scores.forEach(score => { renderScores(score)}))
 })
